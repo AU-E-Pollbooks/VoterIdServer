@@ -1,0 +1,17 @@
+; Example configuration for the Voter ID Service.
+; Copy this file to config.ini in the same directory as voter_db.csv and
+; your generated key/cert files, then adjust paths/port as needed.
+;
+; The certificate, private key, and CA cert referenced below must be
+; generated using the same PKI as the rest of the pollbook system (see
+; the generate_keys.sh script in the companion pollbook-server repository,
+; using the "Voter ID Server" identity) so that this service's certificate
+; is trusted by the check-in server and clients.
+
+[Basic]
+id_service_port = 6666
+
+[Security]
+id_service_cert = id_certificate.pem
+local_private_key = private_key.pem
+ca_cert = ca_cert.pem

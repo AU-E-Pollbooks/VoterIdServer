@@ -1,0 +1,18 @@
+# Real runtime configuration, keys, and certificates -- never commit these.
+config.ini
+*.pem
+*.key
+*.csr
+ca/
+
+# Debug artifacts produced by the OCR pipeline at runtime
+processed_id_debug.jpg
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS/editor cruft
+.DS_Store
